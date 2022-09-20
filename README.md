@@ -1,2 +1,4 @@
 # ik-shooting
-Node.js를 이용한 슈팅게임
+
+
+Node.js, Javascript를 이용한 슈팅게임

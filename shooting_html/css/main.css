@@ -1,0 +1,13 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("../img/space_body_bg.jpg");
+}
+
+.canvas_div{
+    outline: 5px solid white;
+    margin-top: 40px;
+    background-image: url("../img/space_bg.jpg");
+}
