@@ -1,0 +1,23 @@
+{
+  "name": "ik-shooting",
+  "version": "1.0.0",
+  "description": "Node.js를 이용한 슈팅게임",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doitdoik/ik-shooting.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doitdoik/ik-shooting/issues"
+  },
+  "homepage": "https://github.com/doitdoik/ik-shooting#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
