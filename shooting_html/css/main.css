@@ -8,6 +8,7 @@ body{
 
 .canvas_div{
     outline: 5px solid white;
-    margin-top: 40px;
+    margin-top: 50px;
+    border-radius: 10px;
     background-image: url("../img/space_bg.jpg");
 }
