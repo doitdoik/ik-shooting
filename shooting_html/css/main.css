@@ -10,5 +10,10 @@ body{
     outline: 5px solid white;
     margin-top: 50px;
     border-radius: 10px;
-    background-image: url("../img/space_bg.jpg");
+    background-image: url("../img/start.png");
+    background-color: black;
+    background-size: auto;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
 }

@@ -10,7 +10,7 @@ canvas.height = 800;
 // document.body.appendChild(canvas);
 
 let backgroundImg, spaceshipImg, bulletImg, enemyImg, gameOverImg;
-let gameOver = false;
+let gameOver = true;
 let score = 0;
 
 // 시작 위치
@@ -23,8 +23,8 @@ let inputKeys = {};
 function setupKeyboard(){
     document.addEventListener("keydown", (event)=>{
         inputKeys[event.keyCode] = true;
+        console.log(event.keyCode);
     });
-    
     document.addEventListener("keyup", (event)=>{
         delete inputKeys[event.keyCode];
 
@@ -89,14 +89,19 @@ function callEnemy(){
             gameOver = true;
         }
     }
+
 }
+let interval;
 
 function createEnemy(){
-    const interval = setInterval(()=>{
+    interval = setInterval(()=>{
         let e = new callEnemy();
         e.init();
-    }, 1000)
+        console.log("1초마다?");
+    }, 1000);
 }
+
+
 
 // 위치 업데이트
 function update(){
@@ -144,7 +149,7 @@ function loadImage(){
 
     gameOverImg = new Image();
     gameOverImg.src = "img/gameover.png";
-   
+    
 }
 
 function renderImage(){
@@ -172,12 +177,36 @@ function main(){
         renderImage();
         requestAnimationFrame(main);
     }else{
+        
+        console.log("끝");
+        bulletList = [];
+        enemyList = [];
+        score = 0;
+        clearInterval(interval);
+        cancelAnimationFrame(main);
         ctx.drawImage(gameOverImg, 5, 200, 390, 300);
+        
     }
 
 }
-
 loadImage();
 setupKeyboard();
-createEnemy();
-main();
+//main();
+// loadImage();
+// setupKeyboard();
+canvas.onclick = (event)=>{
+    // console.log(gameOver);
+    if(gameOver){
+        gameOver = false;
+        // 픽셀 정리
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        // 컨텍스트 리셋
+        ctx.beginPath();
+        createEnemy();
+        main();
+    }else{
+        
+        
+
+    }
+}
