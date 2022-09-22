@@ -192,10 +192,9 @@ function main(){
 loadImage();
 setupKeyboard();
 //main();
-// loadImage();
-// setupKeyboard();
+
+// 게임시작
 canvas.onclick = (event)=>{
-    // console.log(gameOver);
     if(gameOver){
         gameOver = false;
         // 픽셀 정리
@@ -204,9 +203,5 @@ canvas.onclick = (event)=>{
         ctx.beginPath();
         createEnemy();
         main();
-    }else{
-        
-        
-
     }
 }
