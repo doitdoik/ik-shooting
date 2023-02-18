@@ -4,6 +4,8 @@ body{
     justify-content: center;
     flex-direction: column;
     background-image: url("../img/space_body_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .canvas_div{
